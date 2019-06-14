@@ -7,5 +7,7 @@ import com.curdOps.DTO.Note;
 
 @Repository
 public interface NoteRepository extends JpaRepository<Note, Integer> {
+	
+	
 
 }
