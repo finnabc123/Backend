@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.validation.Valid;
 
+import org.apache.maven.wrapper.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -36,7 +37,6 @@ public class NoteController {
 	// Create New Note
 	@PostMapping("/notes")
 	public Note createNote(@Valid @RequestBody Note note) {
-		System.out.printf("Request Body", note);
 		return noteRepository.save(note);
 	}
 	// Get a single Note
